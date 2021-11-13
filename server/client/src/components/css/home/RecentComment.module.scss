@@ -1,0 +1,139 @@
+@import "../var";
+@import "../mixin";
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+.Auth{
+    background-color: $bg-main;
+    font-family: 'Courgette', cursive;
+    .login{
+        border-bottom: 2px solid $navbar;
+        color: $navbar;
+    }
+}
+.comment{
+    // box-shadow: 0px 0px 4px 1px grey;
+    background-color: wheat;
+    .heading{
+        border-bottom: 2px solid $navbar;
+        color: $navbar;
+    }
+    .message_container{
+        @include Flex();
+        background-color: white;
+        
+        .icon{
+            font-size: 2.1rem;
+        }
+        .msg_container{
+            overflow-y: scroll;
+            height: 60vh;
+            position: relative;
+            &::-webkit-scrollbar {
+                width: 0rem; 
+             }
+            .msg{
+                box-shadow: inset 0px 0px 4px 1px rgb(179, 177, 177);
+                h6{
+                        font-family: 'Lobster', cursive;
+                        // color:white;
+                        font-size: 1.5rem;
+                }
+                .icon{
+                    font-size: 1.5rem;
+                    box-shadow: 0px 0px 4px 2px white;
+                    border-radius: 20rem;
+                    color: white;
+                    background-color: black;
+                }
+                p{
+                    font-family: 'Courgette', cursive;
+                    background-color: $bg-main;
+                }
+                .info{
+                    // position: absolute;
+                    // display: none;
+                    background-color: $bg-main;
+                    box-shadow: inset 0px 0px 4px 1px rgb(179, 177, 177);
+                    
+                    .icon_container{
+                        float:right;
+                        .icon{
+                            font-size: 1.5rem;
+                        }
+                    }
+                    p{
+                        font-family: 'Courgette', cursive;
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+    .replies_container{
+        background-color: white;
+        box-shadow: .51rem  .5rem 1rem rgba($black, .15);
+        // @include Flex();
+        @include Flex();
+        .mainUser{
+            .email{
+                text-align: justify;
+                background-color: $bg-main;
+                font-family: 'Courgette', cursive;
+                    
+            }
+        } 
+        .replies{
+            // @include Flex();
+            box-shadow: inset 0px 0px 4px 1px rgb(204, 203, 203);
+            height: 60vh;
+            overflow-y: scroll;
+            justify-content: flex-end;
+            clear: both;
+            &::-webkit-scrollbar {
+                width: 0rem; 
+             }
+             .no_comment{
+                //  @include Flex();
+                 text-transform: capitalize;
+                 font-size: 4rem;
+                 font-family: 'Courgette', cursive;
+                 font-weight: 900;
+                 color: rgb(162, 162, 165);
+
+             }
+            .infoData{
+                height: min-content;
+                div{
+                    box-shadow: 0px 0px 4px 1px rgb(204, 203, 203);
+                    @include Flex($dir:column);
+                    height: min-content;
+                    justify-content: flex-end;
+                    p{
+                        text-align: justify;
+                        background-color: $bg-main;
+                        font-family: 'Courgette', cursive;
+                        float: right;
+                        clear: both;
+                    }
+                    .email{
+                        background-color: wheat;
+                    }
+                }
+                }
+            }
+            input{
+                font-family: 'Courgette', cursive;
+                outline: none;
+                border:none;
+                line-height: 1.2rem;
+                box-shadow: inset 0px 0px 4px 1px rgb(204, 203, 203);
+            }
+            button{
+                box-shadow:  0px 0px 4px 1px rgb(221, 217, 217);
+                
+                .icon{
+                    font-size: 2rem;
+                }
+            }
+        // }
+    }
+}

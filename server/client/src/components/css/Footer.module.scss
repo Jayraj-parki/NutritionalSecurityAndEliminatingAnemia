@@ -1,0 +1,74 @@
+@import "./var";
+@import "./mixin";
+
+.contact{
+    @include Flex($justify:space-between,$dir:row);
+   
+    div{
+        transition: $duration ease-in-out;
+        box-shadow: $shadow;
+        border-radius: $radius;
+        margin:1rem 0rem;
+        .icon{
+            color: white;
+            font-size: 2rem;
+        }
+        .field{
+            color: white;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            resize: none;
+            &::placeholder{
+                color:white;
+            }
+        }
+        
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+             margin: 0;
+        }
+        &:hover{
+            @include hoverUp(-5px);
+        }
+    }
+    .sendMsg{
+        background-color: rgb(255, 115, 0);
+        background-color: rgb(255, 255, 255);
+        color:$navbar;
+        font-weight: $font-heading;
+        letter-spacing: .1rem;
+        text-transform: capitalize;
+        font-size: 1.2rem;
+        transition: $duration ease-in-out;
+        &:hover{
+            box-shadow: $shadow;
+            color:$white;
+            transform: scale(1.01);
+        }
+    }
+    
+}
+.Location{
+    div{
+        @include Flex();
+        .icon{
+            font-size: 4rem;
+            filter:drop-shadow(0px 4px 4px $white);
+        }
+        .address{
+            color:#da55fc;
+            text-align: center;
+            font-weight: $font-heading;
+            letter-spacing: .1rem;
+        }
+    }
+}
+.footer{
+   p{
+    font-size: 1.1rem;
+       color:#e57eff;
+    }
+       
+}

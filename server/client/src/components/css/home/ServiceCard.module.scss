@@ -1,0 +1,24 @@
+@import "../var";
+@import "../mixin";
+
+.ServiceCard{
+    // background-color: $navbar;
+    background-color: #62027a;
+
+    transform: scale(0.9);
+    .icon{
+        color:$white;
+        font-size: 5rem;
+    }
+    div h3{
+        font-family: $font-family;
+        color:$white;
+        text-transform: capitalize;
+        font-size: 1.4rem;
+        text-align: center;
+        font-weight: $font-heading;
+        letter-spacing: .1rem;
+        line-height: 2rem;
+    }
+    
+}

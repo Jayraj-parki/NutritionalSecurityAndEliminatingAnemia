@@ -1,0 +1,20 @@
+@mixin  Flex($justify:center,$align:center,$dir:column,$wrap:wrap) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $dir;
+    flex-wrap: $wrap;
+}
+@mixin hoverUp($move:-50px) {
+    transform: translateY($move);
+}
+@mixin hoverOut($size:1.1) {
+    transform: scale($size);
+}
+
+
+
+
+
+
+

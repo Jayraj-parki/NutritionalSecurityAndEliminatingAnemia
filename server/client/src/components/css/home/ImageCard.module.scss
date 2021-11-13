@@ -1,0 +1,13 @@
+@import "../var";
+@import "../mixin";
+.imageCard{
+    transform: scale(0.95);
+    transition: $duration;
+    // box-shadow: $shadow-main;
+    &:hover{
+        transform: scale(1);
+    }
+    @media screen and ( max-width:768px) {
+        display: none;
+    }
+}

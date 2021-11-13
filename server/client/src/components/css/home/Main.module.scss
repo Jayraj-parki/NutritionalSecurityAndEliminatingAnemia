@@ -1,0 +1,140 @@
+@import "../var";
+@import "../mixin";
+.main{
+    @include Flex($dir:row);
+    
+    border-radius: $radius;
+    color:$white;
+    font-family: $font-family;
+    background-image: linear-gradient(to right ,rgba(255, 238, 0, 0.205) 70%,rgba(9, 131, 9, 0.664) 30%);
+    position: relative;
+    overflow:hidden;
+    
+    .content{
+        color:rgb(117, 116, 116);
+        color:$navbar;
+        z-index: 1;
+        h1,h4{
+            font-size:8rem;
+            // font-family: 'Dancing Script', cursive;
+            font-family: 'Lobster', cursive;
+        }
+        @media screen and (max-width:576px) {
+            h1{
+                font-size:1rem;
+            }
+        }
+        h4{
+            font-size:2rem;
+            @media screen and (max-width:576px) {
+                font-size:1.3rem;
+            }
+        }
+    }
+    img{
+        position: absolute;
+    }
+    .doctor{
+        bottom: 0;
+        right: 2%;
+        
+    }
+    .food{
+        bottom: 0;
+        right:25%;
+        z-index: 0;
+    }
+    .anaemia{
+        right:32%;
+        top:3%;
+        
+    }
+    @media screen and  (max-width:1200px) {
+ 
+        .food{
+           display:none
+        }
+        .anaemia{
+           display:none
+        }
+    }
+
+    @media screen and (min-width:1200px) and (max-width:1330px) {
+        
+        .doctor{
+            bottom: 0%;
+            right: 2%;
+            
+        }
+        .food{
+            bottom: 12%;
+            right:25%;
+        }
+        .anaemia{
+            top:5%;
+            right:22%;
+            
+        }
+    }
+    @media screen and (min-width:992px) and (max-width:1200px) {
+        
+        .doctor{
+            bottom: 0%;
+            right: 2%;
+            
+        }
+        .food{
+           display:none
+        }
+        .anaemia{
+           display:none
+        }
+    }
+    @media screen and (min-width:768px) and (max-width:991px) {
+        
+        .doctor{
+            bottom: 0%;
+            right: 2%;
+            
+        }
+        .food{
+           display:none
+        }
+        .anaemia{
+           display:none
+        }
+        .content{
+            h1{
+                font-size:4rem;
+            }
+           
+        }
+    }
+    @media screen and (min-width:576px) and (max-width:767px) {
+
+               
+        .doctor{
+            display: none;
+            
+        }
+        .content{
+            h1{
+                font-size:4rem;
+            }
+           
+        }
+    }
+    @media screen and  (max-width:578px) {
+               
+        .doctor{
+            display: none;
+            
+        }
+        .content{
+            h1{
+                font-size:4rem;
+            }
+           
+        }
+    }
+}

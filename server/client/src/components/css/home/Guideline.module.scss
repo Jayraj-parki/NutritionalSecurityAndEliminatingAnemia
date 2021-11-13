@@ -1,0 +1,19 @@
+@import "../var";
+@import "../mixin";
+.doctor{
+    color: $navbar;
+    font-family: $font-family;
+    transform: scale(0.95);
+    div {
+        text-align: center;
+        text-transform: capitalize;
+        h5{
+            font-weight: $font-heading;
+        }
+        p{
+            font-weight: $font-heading;
+            color:black
+        }
+    }
+   
+}

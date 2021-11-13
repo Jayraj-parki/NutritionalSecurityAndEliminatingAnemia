@@ -1,0 +1,44 @@
+@import "../var";
+@import "../mixin";
+
+.card{
+    color: $navbar;
+    transition: $duration;
+    transform: scale(0.9);
+    div {
+        
+        h5{ 
+            font-family: $font-family;
+            font-weight: $font-heading;
+        }
+        p{
+            font-family: $font-family;
+            color:black;
+            font-size: 1.2rem;
+            text-align:start;
+        }
+    }
+    a{
+        transition: $duration;
+        transform: scaleY(0);
+        text-decoration: none;
+        transform-origin: 100% 0;
+        background-color: rgb(0, 173, 87);
+        button{
+            color:$white;
+            font-family: $font-family;
+            letter-spacing: .1rem;
+            padding: .5rem 1.1rem;
+            font-size: 1.2rem;
+            font-weight: 900;
+        }
+    }
+    
+    &:hover{
+        @include hoverUp(-50px);
+        a{
+            @include Flex();
+            transform: scale(1);
+        }
+    }
+}

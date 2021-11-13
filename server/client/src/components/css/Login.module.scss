@@ -1,0 +1,59 @@
+@import "./mixin"; 
+@import "./var"; 
+.container{
+    @include Flex();
+    
+    // background-color: $bg-main;
+    .Login{
+        @include Flex();
+        background-color: $white;
+        box-shadow: $shadow;
+        grid-template-columns: auto;
+        border-radius:$radius;
+        h1{
+            text-align: center;
+            border-bottom: 2px solid $navbar;
+            color:$navbar;
+            font-size: 2rem;
+        }
+        .input{
+            font-family: 'Roboto Slab', serif;
+            font-size: large;
+            color: $navbar;
+            // font-family: $font-family;
+            &:focus{
+                border: none;
+                outline: none;
+                border-bottom: 2px solid $white;
+                box-shadow: $shadow;
+            }
+        }
+        .btn{
+            font-size: 1.2rem;
+            // font-family: 'Roboto Slab', serif;
+            background-color: rgb(0, 173, 87);
+            color: $white;
+            
+        }
+        .reset{
+            color: $navbar;
+        }
+        .txt{
+            text-align: center;
+            font-size: 1.2rem;
+            color:$black;
+            font-family: 'Roboto Slab', serif;
+            .action{
+                font-family: 'Roboto Slab', serif;
+                font-size: 1.2rem;
+                text-decoration: none;
+                text-transform: capitalize;
+                color: blue;
+                &:hover{
+                    background: none;
+                }
+                
+            }
+        }
+    }
+}
